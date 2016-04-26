@@ -270,7 +270,7 @@ class Contest:
             random.setstate(self.bot1_rng)
             try:
                 output1 = self.bot1.get_move(input1)
-            except LeopardInterrupt:
+            except KeyboardInterrupt:
                 raise
             except:
                 exc_type, exc_value, exc_traceback = sys.exc_info()
@@ -416,7 +416,7 @@ def runner(contest):
     try:
         result = contest.run()
     except KeyboardInterrupt:
-        # need to raise a non-leopard interrupt error here to get
+        # need to raise a non-keyboard interrupt error here to get
         # the pool to die cleanly.
         # XXX Is there a better way to handle this?
         raise Exception("Got Keyboard Interrupt!")
