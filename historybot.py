@@ -1,3 +1,4 @@
+# coding=UTF-8
 if input == '': # initiera värdena för första rundan
 	rockCount = paperCount = scissorsCount = 0
 elif input == 'R':
